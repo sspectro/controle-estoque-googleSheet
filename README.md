@@ -1,14 +1,19 @@
 # controle-estoque-googleSheet
 
->Controle de estoque com google sheet com uso do google appscript. Uso de bootstrap5 e VueJs
+>Controle de estoque com google sheet com uso do google appscript e bootstrap5.
 > 
->>Inspirado em vídeos canal [SGP Google Sheets](https://www.youtube.com/@sgpgooglesheets)
+>>
 
 ## Ambiente de Desenvolvimento
 Linux, Visual Studio Code, appscript google, VueJs
 
 ## Documentação
 - [NodeJs](https://nodejs.org/en/download)
+- Dica planilhas google [SGP Google Sheets](https://www.youtube.com/@sgpgooglesheets)
+- Dica planilhas google [Alessandro Trovato](https://www.youtube.com/@AlessandroTrovato)
+- Dica planilhas google [Learn Google Sheets & Excel Spreadsheets](https://www.youtube.com/@ExcelGoogleSheets)
+- [Google Clasp Install](https://unpkg.com/browse/@google/clasp@1.1.4/README.md)
+- [Materialize](https://materializecss.com/getting-started.html)
 
 
 ## Desenvolvimento
@@ -22,6 +27,33 @@ Linux, Visual Studio Code, appscript google, VueJs
     - Editar `gitignore` e colocar configuração para `Node, vue, vuejs, vscode/visualstudio code`
         >Use o site [gitignore.io](https://www.toptal.com/developers/gitignore/)
     
+    - Instalar o `node js`
+    - Criar planilha `Controle Estoque`
+
+    - Incluir modulos node
+        Basta pressionar `Enter` após executar o comando até concluir
+        ````bash
+        npm init
+        ````
+    - Instalar o `google clasp`
+        ```bash
+        sudo npm install -g @google/clasp
+        npm i -S @types/google-apps-script
+        ```
+    - Efetuar `login` via navegador
+        ```bash
+        clasp login
+        ```
+    - Copiar id do projeto do google appScript da planilha e clonar o projeto
+        Consta na url do google appScript
+        ```bash
+        clasp clone "seuIdProjeto"
+        ````
+    - Após alguma alteração no arquivo de código baixado
+        Comando para atualizar appScript
+        ```bash
+        clasp push
+        ````
 
 
     </p>

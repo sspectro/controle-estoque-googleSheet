@@ -1,0 +1,14 @@
+{
+  "name": "controle-estoque-googlesheet",
+  "version": "1.0.0",
+  "description": ">Controle de estoque com google sheet com uso do google appscript e bootstrap5 >  >>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.82"
+  }
+}
