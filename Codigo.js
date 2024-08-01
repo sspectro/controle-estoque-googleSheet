@@ -13,6 +13,19 @@ function doGet(e){
     }
 }
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function getScriptUrl(){
+const url = ScriptApp.getService().getUrl();
+return url;
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function getOutputFile(fileName){
+const url = getScriptUrl();
+let html = HtmlService.createHtmlOutputFromFile(fileName).getContent();
+html = html.replace(/\?temp/g, url+'?temp');
+return html;
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function getProdutos(){
     // Obtém a planilha ativa
     var sheet = SpreadsheetApp.getActiveSheet();
